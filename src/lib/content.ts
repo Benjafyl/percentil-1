@@ -16,8 +16,8 @@ export const instagramUrl = "https://www.instagram.com/bpgtrading/?hl=es-la";
 
 export const applicationOpening = {
   generation: "Cuarta generación",
-  status: "Inscripciones abiertas hasta el 15 de octubre",
-  text: "La cuarta generación de Percentil1 abrió sus postulaciones hasta el 15 de octubre. Deja tus datos para recibir información de cupos y modalidad.",
+  status: "Inscripciones cerradas hasta nuevo aviso",
+  text: "Las inscripciones para la cuarta generación de Percentil1 están cerradas. Anunciaremos una nueva apertura de cupos más adelante.",
 };
 
 export const heroStats = [

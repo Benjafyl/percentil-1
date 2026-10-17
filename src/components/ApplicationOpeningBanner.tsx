@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 export function ApplicationOpeningBanner({
   generation,
   status,
@@ -12,7 +10,7 @@ export function ApplicationOpeningBanner({
   return (
     <div
       id="tercera-generacion"
-      className="premium-card mt-8 grid max-w-4xl scroll-mt-28 gap-5 p-4 md:grid-cols-[1fr_auto] md:items-center md:p-5"
+      className="premium-card mt-8 max-w-4xl scroll-mt-28 p-4 md:p-5"
     >
       <div>
         <p className="eyebrow mb-2">{generation}</p>
@@ -23,14 +21,6 @@ export function ApplicationOpeningBanner({
           {text}
         </p>
       </div>
-
-      <a
-        href="#contacto"
-        className="btn-primary min-w-44 !min-h-12 !px-5 !py-3 text-[0.72rem]"
-      >
-        Postular
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
     </div>
   );
 }
