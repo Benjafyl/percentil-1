@@ -545,7 +545,7 @@ function Footer() {
             gestión de riesgo de cada persona.
           </p>
         </div>
-        <div className="mt-9 flex justify-center border-t border-[#36D9FF]/10 pt-8">
+        <div className="mt-9 flex justify-center border-t border-[#36D9FF]/10 pt-8 md:justify-end">
           <a
             href={developerWebsite}
             target="_blank"
@@ -556,8 +556,8 @@ function Footer() {
             <Image
               src={developerIcon}
               alt=""
-              width={32}
-              height={32}
+              width={30}
+              height={30}
               className="developer-credit-icon"
             />
             <span>

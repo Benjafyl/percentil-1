@@ -9,14 +9,17 @@
   --muted-dark: #5c6068;
   --blue: #36d9ff;
   --blue-hover: #78ecff;
-  --credit-icon-size: 2rem;
+  --credit-icon-size: 1.875rem;
   --credit-gap: 0.75rem;
-  --credit-padding-block: 0.625rem;
-  --credit-padding-inline: 1rem;
+  --credit-padding-block: 0.5rem;
+  --credit-padding-inline: 0.75rem;
   --credit-radius: 0.5rem;
-  --credit-font-size: 0.875rem;
-  --credit-line-height: 1.5rem;
-  --credit-transition: 180ms;
+  --credit-font-size: 0.75rem;
+  --credit-line-height: 1.25rem;
+  --credit-transition: 200ms;
+  --credit-hover-angle: -5deg;
+  --credit-press-offset: 1px;
+  --credit-press-scale: 0.94;
 }
 
 .developer-credit {
@@ -25,25 +28,21 @@
   justify-content: center;
   gap: var(--credit-gap);
   max-width: 100%;
-  border: 1px solid color-mix(in srgb, var(--blue) 12%, transparent);
   border-radius: var(--credit-radius);
-  background: color-mix(in srgb, var(--blue) 3%, transparent);
   padding: var(--credit-padding-block) var(--credit-padding-inline);
   color: var(--muted);
   font-size: var(--credit-font-size);
   font-weight: 600;
   line-height: var(--credit-line-height);
   transition:
-    border-color var(--credit-transition) ease-out,
-    color var(--credit-transition) ease-out;
-}
-
-.developer-credit:hover {
-  border-color: color-mix(in srgb, var(--blue) 40%, transparent);
-  color: var(--foreground);
+    background var(--credit-transition) ease-out,
+    color var(--credit-transition) ease-out,
+    transform var(--credit-transition) ease-out;
 }
 
 .developer-credit:focus-visible {
+  background: color-mix(in srgb, var(--blue) 5%, transparent);
+  color: var(--foreground);
   outline: 2px solid var(--blue);
   outline-offset: 4px;
 }
@@ -52,6 +51,30 @@
   width: var(--credit-icon-size);
   height: var(--credit-icon-size);
   flex-shrink: 0;
+  transition: transform var(--credit-transition) ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .developer-credit:hover {
+    background: color-mix(in srgb, var(--blue) 5%, transparent);
+    color: var(--foreground);
+  }
+
+  .developer-credit:hover .developer-credit-icon {
+    transform: rotate(var(--credit-hover-angle));
+  }
+}
+
+.developer-credit:focus-visible .developer-credit-icon {
+  transform: rotate(var(--credit-hover-angle));
+}
+
+.developer-credit:active {
+  transform: translateY(var(--credit-press-offset));
+}
+
+.developer-credit:active .developer-credit-icon {
+  transform: rotate(var(--credit-hover-angle)) scale(var(--credit-press-scale));
 }
 
 .developer-credit-name {
@@ -60,8 +83,16 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .developer-credit {
+  .developer-credit,
+  .developer-credit-icon {
     transition: none;
+  }
+
+  .developer-credit:active,
+  .developer-credit:hover .developer-credit-icon,
+  .developer-credit:focus-visible .developer-credit-icon,
+  .developer-credit:active .developer-credit-icon {
+    transform: none;
   }
 }
 
