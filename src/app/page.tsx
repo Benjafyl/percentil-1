@@ -26,8 +26,8 @@ const whatsappIntro =
   "Hola, quiero recibir información sobre la Mentoría Percentil1.";
 const profileImage = "/assets/benjamin-page-profile.png"; // Cambia esta ruta si reemplazas la foto oficial.
 const percentilLogo = "/assets/percentil1-logo.jpeg"; // Reemplaza este asset si cambia el logo oficial.
-const dreamWebLogo = "/assets/dream-web-chile-logo.png";
-const dreamWebInstagram = "https://www.instagram.com/dreamwebchile/";
+const developerIcon = "/assets/byl-icon.svg";
+const developerWebsite = "https://byl-software.vercel.app";
 
 const homeNavItems = [
   ["Inicio", "#inicio"],
@@ -547,24 +547,22 @@ function Footer() {
         </div>
         <div className="mt-9 flex justify-center border-t border-[#36D9FF]/10 pt-8">
           <a
-            href={dreamWebInstagram}
+            href={developerWebsite}
             target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-3 border border-[#36D9FF]/12 bg-[#36D9FF]/[0.03] px-4 py-2.5 text-sm font-semibold leading-6 text-[#A0A6B0] transition hover:border-[#36D9FF]/32 hover:text-[#F5F7FA]"
-            aria-label="Desarrollado por Dream Web Chile"
+            rel="noopener noreferrer"
+            className="developer-credit"
+            aria-label="Desarrollado por BYL — visitar sitio web (abre en una nueva pestaña)"
           >
-            <span className="relative h-7 w-7 overflow-hidden rounded-sm bg-black/60">
-              <Image
-                src={dreamWebLogo}
-                alt=""
-                fill
-                sizes="28px"
-                className="object-contain"
-              />
-            </span>
+            <Image
+              src={developerIcon}
+              alt=""
+              width={32}
+              height={32}
+              className="developer-credit-icon"
+            />
             <span>
               Desarrollado por{" "}
-              <span className="text-[#F5F7FA]">Dream Web Chile</span>
+              <span className="developer-credit-name">BYL</span>
             </span>
           </a>
         </div>

@@ -9,6 +9,60 @@
   --muted-dark: #5c6068;
   --blue: #36d9ff;
   --blue-hover: #78ecff;
+  --credit-icon-size: 2rem;
+  --credit-gap: 0.75rem;
+  --credit-padding-block: 0.625rem;
+  --credit-padding-inline: 1rem;
+  --credit-radius: 0.5rem;
+  --credit-font-size: 0.875rem;
+  --credit-line-height: 1.5rem;
+  --credit-transition: 180ms;
+}
+
+.developer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--credit-gap);
+  max-width: 100%;
+  border: 1px solid color-mix(in srgb, var(--blue) 12%, transparent);
+  border-radius: var(--credit-radius);
+  background: color-mix(in srgb, var(--blue) 3%, transparent);
+  padding: var(--credit-padding-block) var(--credit-padding-inline);
+  color: var(--muted);
+  font-size: var(--credit-font-size);
+  font-weight: 600;
+  line-height: var(--credit-line-height);
+  transition:
+    border-color var(--credit-transition) ease-out,
+    color var(--credit-transition) ease-out;
+}
+
+.developer-credit:hover {
+  border-color: color-mix(in srgb, var(--blue) 40%, transparent);
+  color: var(--foreground);
+}
+
+.developer-credit:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.developer-credit-icon {
+  width: var(--credit-icon-size);
+  height: var(--credit-icon-size);
+  flex-shrink: 0;
+}
+
+.developer-credit-name {
+  color: var(--foreground);
+  font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .developer-credit {
+    transition: none;
+  }
 }
 
 @theme inline {
