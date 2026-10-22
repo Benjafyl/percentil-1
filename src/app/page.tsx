@@ -27,7 +27,7 @@ const whatsappIntro =
 const profileImage = "/assets/benjamin-page-profile.png"; // Cambia esta ruta si reemplazas la foto oficial.
 const percentilLogo = "/assets/percentil1-logo.jpeg"; // Reemplaza este asset si cambia el logo oficial.
 const developerIcon = "/assets/byl-icon.svg";
-const developerWebsite = "https://byl-software.vercel.app";
+const developerWebsite = "https://bylsoftware.cl/";
 
 const homeNavItems = [
   ["Inicio", "#inicio"],
