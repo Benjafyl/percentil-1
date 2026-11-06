@@ -31,7 +31,7 @@ const developerWebsite = "https://bylsoftware.cl/";
 
 const homeNavItems = [
   ["Inicio", "#inicio"],
-  ["Cuarta generación", "#tercera-generacion"],
+  ["Quinta generación", "#tercera-generacion"],
   ["Postulación", "#contacto"],
 ];
 
