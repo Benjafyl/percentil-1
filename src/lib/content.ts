@@ -215,4 +215,18 @@ export const studentReviews = [
     quote:
       "Experiencia enriquecedora y positiva, aprendí a entender mejor el mercado, la importancia del orden y de la data.",
   },
+  {
+    name: "Pedro Pizarro",
+    generation: "4ta generación Percentil1",
+    rating: 5,
+    quote:
+      "Me encantó lo bien que se explica todo con ejemplos reales y lo rápido que uno pasa a ver cómo realmente se hace más allá de pura teoría, también destacar la flexibilidad de horarios y disposición de Benja a seguir ayudándote fuera del horario de la mentoria!",
+  },
+  {
+    name: "Mariana Riquelme",
+    generation: "4ta generación Percentil1",
+    rating: 5,
+    quote:
+      "Muy buena mentoría, aprendí trading desde cero, el Benja explica todo muy simple y nos enseñó su estrategia. También está dispuesto a responder nuestras preguntas incluso después de terminar la mentoría. Te da acceso a una comunidad de traders que es lo que estaba buscando.",
+  },
 ];
