@@ -16,6 +16,7 @@ export const instagramUrl = "https://www.instagram.com/bpgtrading/?hl=es-la";
 
 export const applicationOpening = {
   generation: "Quinta generación",
+  deadlineIso: "2026-11-22T23:59:59-03:00",
   status: "Inscripciones abiertas hasta el 22 de noviembre",
   text: "Las postulaciones para la quinta generación de Percentil1 están abiertas hasta el 22 de noviembre. Deja tus datos para recibir información de cupos y modalidad.",
 };

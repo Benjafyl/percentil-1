@@ -195,6 +195,7 @@ function Hero() {
           </div>
           <ApplicationOpeningBanner
             generation={applicationOpening.generation}
+            deadlineIso={applicationOpening.deadlineIso}
             status={applicationOpening.status}
             text={applicationOpening.text}
           />
