@@ -141,7 +141,7 @@ export default function RootLayout({
           type="application/json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              ga4Id: process.env.NEXT_PUBLIC_SITE_GA4_ID || "",
+              ga4Id: process.env.NEXT_PUBLIC_SITE_GA4_ID || "G-7QK00F7YR6",
               clarityId: process.env.NEXT_PUBLIC_SITE_CLARITY_ID || "",
               hosts: ["percentil1.cl", "www.percentil1.cl"],
             }).replace(/</g, "\\u003c"),
