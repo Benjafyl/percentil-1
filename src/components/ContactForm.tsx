@@ -186,6 +186,7 @@ export function ContactForm() {
 
       setForm(initialState);
       setStatus("success");
+      window.dispatchEvent(new Event("site:lead"));
       setFeedback("Postulación enviada correctamente");
     } catch {
       setStatus("error");

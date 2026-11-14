@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Sora } from "next/font/google";
 import { getSiteUrl, siteConfig } from "@/lib/seo";
 import "./globals.css";
@@ -135,6 +136,18 @@ export default function RootLayout({
       className={`${inter.variable} ${sora.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full">
+        <script
+          id="site-measurement-config"
+          type="application/json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              ga4Id: process.env.NEXT_PUBLIC_SITE_GA4_ID || "",
+              clarityId: process.env.NEXT_PUBLIC_SITE_CLARITY_ID || "",
+              hosts: ["percentil1.cl", "www.percentil1.cl"],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+        <Script src="/site-measurement.js" strategy="afterInteractive" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

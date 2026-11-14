@@ -36,3 +36,7 @@ Build:
 ```bash
 npm run build
 ```
+# Medición opcional
+
+Configurar `NEXT_PUBLIC_SITE_GA4_ID` y `NEXT_PUBLIC_SITE_CLARITY_ID` con identificadores propios de este sitio en el entorno de compilación. Cada etiqueta se carga solo tras el consentimiento correspondiente. Se miden visitas, CTA, clics de contacto y formularios enviados correctamente, sin enviar los campos del formulario. Comprobar la instalación en tiempo real antes de darla por activa.
+
